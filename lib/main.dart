@@ -14,24 +14,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sample Crud',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue, error: Colors.red),
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+          displayMedium: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Colors.white),
+          displaySmall: TextStyle(fontSize: 16, color: Colors.white),
+          // Add more text styles as needed
+        ),
+
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner : false,
       home: const LandingPage(),
     );
   }
